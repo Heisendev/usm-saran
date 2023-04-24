@@ -4,13 +4,12 @@ import { PlanetScaleDialect } from 'kysely-planetscale';
 
 interface User {
   id: Generated<number>;
-  name: string;
-  username: string;
-  email: string;
+  nom: string;
+  prenom: string;
 }
 
 interface Database {
-  users: User;
+  user: User;
   // https://github.com/nextauthjs/next-auth/issues/4922
 }
 

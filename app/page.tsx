@@ -12,9 +12,9 @@ export default async function IndexPage({
 }) {
   const search = searchParams.q ?? '';
   const users = await queryBuilder
-    .selectFrom('users')
-    .select(['id', 'name', 'username', 'email'])
-    .where('name', 'like', `%${search}%`)
+    .selectFrom('user')
+    .select(['nom', 'prenom'])
+    .where('nom', 'like', `%${search}%`)
     .execute();
 
   return (
